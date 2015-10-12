@@ -1,0 +1,50 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{07C4B5C4-2753-48C0-9BBC-B8C8C9831275}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Inventory</RootNamespace>
+    <AssemblyName>Inventory</AssemblyName>
+    <OutputName>Inventory</OutputName>
+    <CWOutputType>Exe</CWOutputType>
+    <Model>Lib</Model>
+    <ApplicationIcon>Inventory .ico</ApplicationIcon>
+    <DefineConstants>_ABCDllMode_=&gt;0%3b_ABCLinkMode_=&gt;1%3b</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>False</check_stack>
+    <check_index>False</check_index>
+  </PropertyGroup>
+  <ItemGroup>
+    <FileDriver Include="TOPSPEED" />
+    <Compile Include="EFOCUS.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Inventory.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Inventory001.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="INVENTORY_BC.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="Inventory_BC0.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Library Include=".manifest" />
+    <Library Include="New UI\AddPicture.jpg" />
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>
