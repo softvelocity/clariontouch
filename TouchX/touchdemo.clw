@@ -1,6 +1,6 @@
                      PROGRAM
 
-                     INCLUDE ('TOUCH.INC'),ONCE
+                     INCLUDE ('CWTOUCH.INC'),ONCE
 
 EXTENT               GROUP,TYPE
 cx                     LONG
@@ -91,7 +91,7 @@ X                UNSIGNED
 Y                UNSIGNED
 W                UNSIGNED
 H                UNSIGNED
-Org              LIKE(POINT)
+Org              LIKE(TPOINT)
 NaturalSz        LIKE(EXTENT)
 Sz               LIKE(EXTENT)
 
@@ -309,7 +309,7 @@ TouchResponder.IPointerResponder.Event  PROCEDURE (*TouchData tdata)
   
 td      &TouchData,AUTO
 pt      &TouchPoint,AUTO
-xy      LIKE(POINT),AUTO
+xy      LIKE(TPOINT),AUTO
 clr     LONG,AUTO
 pic     CSTRING(254),AUTO
 i       UNSIGNED,AUTO

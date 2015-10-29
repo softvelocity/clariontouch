@@ -24,7 +24,7 @@
     <check_index>False</check_index>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="touch.clw" />
+    <Compile Include="cwtouch.clw" />
     <Compile Include="touchdemo.clw" />
   </ItemGroup>
   <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
